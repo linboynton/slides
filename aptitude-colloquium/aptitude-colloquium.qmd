@@ -1,0 +1,333 @@
+---
+title: "Closed-loop plastic recycling:"
+subtitle: "Design and evaluation of reverse logistics for plastic bottles"
+title-slide-attributes:
+    title-font-size: 20px
+date: "14 February 2023"
+author: "Lin Boynton"
+institute: Global Health Engineering Group, Dept of Mechnical and Process Engineering
+format:
+  revealjs: 
+    theme: [default, "slides.scss"]
+    css: "slides.css"
+    transition: fade
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/eth-logo.png
+---
+
+## Plastic waste harms environmental and human health
+
+![](images/paste-C01777EE.png)
+
+
+::: notes
+Plastic's tunable properties make it useful in an extremely wide range of applications in daily life, but the waste from these products is detrimental to both planetary and human health. Not only is it derived from fossil fuels, but it can choke rivers, litter the land and ocean, help spread disease, and produce toxic fumes during open waste burning.
+:::
+
+## 2022 was a year of global commitments
+
+![](images/unea.jpeg){fig-align="center"}
+
+::: incremental
+-   Global Plastic Treaty, United Nations Environment Assembly
+-   50 by 2050 Initiative, United Nations Climate Change conference
+:::
+
+::: footer
+Duncan Moore for UNEP/Flickr
+:::
+
+::: notes
+However, 2022 was a year of unprecedented global commitment. At the beginning of the year, there was international consensus to develop a legally-binding global plastic treaty. Closing out the year, Africa introduced the 50 by 2050 initiative to recycle at least 50% of its waste by 2050. But plastic recycling has been happening at the municipal level since the 1970s and decades later the OECD reported that globally only 9% of plastic is being recycled, with the rest being landfilled, incinerated, or mismanaged and leaked into the environment.
+
+I want to start at the global level and highlight the magnitude of the plastic problem. Last year, the OECD reported that on average only 9% of plastic is being recycled, the rest of which is landfilled, mismanaged, or incinerated. However, last year we also saw unprecedented global commitment to tackling plastic waste. At the beginning of the year, countries at the United Nations Environment Assembly reached a consensus to develop a global plastic treaty. And closing out the year at COP27, Africa started an initiative to recycle at least 50% of its waste by 2050.
+:::
+
+## Production {background-image="images/geyer-cite.png" background-size="contain"}
+
+::: notes
+To understand the magnitude of plastic waste that isn't recycled, I want to show a figure adapted from Geyer et al. This graph shows the global production of plastic between 1950 and 2015 broken down by industry. On the right hand side, there are additional details on the volumes for each industry as well as a colored bar indicating the average lifetime of the plastic before disposal. In 2015, total plastic production was 448 million metric tons. If only 9% was recycled that leaves over 400 million metric tons that was not recycled (left the loop?).
+:::
+
+## Packaging {background-image="images/geyer-selective-cite.png" background-size="contain"}
+
+::: notes
+Before moving on, I want to call your attention to the biggest application for plastic: packaging. Over a third of all production is for packaging applications, such as PET bottles and plastic bags, which are disposed within 6 months. There is a 69% market share for plastics in food and beverage packaging. Plastic has huge value for FC applications, yet recycling of these plastics in closed-loops is difficult. Closed-loop plastic recycling recaptures value, yet FC plastics generally are recycled into lower-value applications.
+
+Difference in recycling rates of plastic versus cans, glass, paper - The majority of the world struggles with solid waste management in general - Therefore, plastic collection for recycling is largely based on incentives - PET is highly recycled, but there is a big gap for other plastics
+:::
+
+## Challenge of collection
+
+![](images/mismanaged.png)
+
+::: notes
+As we saw on the last slide, there is a huge amount of plastic packaging discarded each year and this figure proves that SWM systems can't keep up. Globally, 22% of plastic waste is mismanaged and SSA has the highest level of mismanaged litter at 64%. But recycling technology at the municipal level has been around since the early 1970s. This is more than a technology problem, so what can we do to incentivise collection? This is a major barrier for recycling because collection is only the first step in the recycling process. OECD avg 6%, non-OECD average is 39%, and Sub-Saharan Africa has the highest rates with 64% of plastic being mismanaged and uncollected (almost triple the world average). In contrast recycling rates are between 5 and 14% globally (smaller range). 
+:::
+
+## Challenge of food-contact material
+
+::: incremental
+-   Even if collection occurs, there are barriers to recycled food-contact materials (FCMs)
+    -   Contamination from chemicals or previous use
+
+    -   Degradation during use/ recycling
+
+    -   Commingling of non-food-grade plastics
+:::
+
+::: notes
+Click next. Evem if overcome collection challenge, a large portion of packaging is food contact material which presents other technical recycling difficulties. Because FCM has higher safety standards, contamination from chemicals, rxn products, or previous use can be a problem. degradation. Commingling with other non-FCMs degrades the plastic quality as well. Taken together, this leads to low rates of closed loop recycling and downcycling of FCM plastics. Closed loop recycling is associated with high value plastic recycling by recycling it back into the same application.
+:::
+
+::: footer
+Geueke, Birgit, Ksenia Groh, and Jane Muncke. ["Food packaging in the circular economy: Overview of chemical safety aspects for commonly used materials."](https://www.sciencedirect.com/science/article/pii/S0959652618313325) Journal of cleaner production 193 (2018).
+:::
+
+## Challenge of closing the loop
+
+Forward or direct logistics is the flow of materials from the supplier to consumer
+
+. . .
+
+![](images/paste-54323C04.png)
+
+. . .
+
+Reverse logistics is the flow of products from the consumer back to the producer
+
+. . .
+
+![](images/closed-loop.png){fig-align="center"}
+
+::: notes
+So what are was to close the loop for FCMs? To address this challenge I want to introduce two terms: forward and reverse logistics.
+:::
+
+## Goal
+
+. . .
+
+Develop and evaluate the use of reverse logistics in closed-loop plastic recycling in a resource-limited context
+
+::: notes
+Plastic recycling is a complex problem that intersects engineering, economics, and society. The goal of my project is to address this intersection by developing and evaluating the use of reverse logistics in a closed-loop plastic recycling pilot in a resource-limited context.
+:::
+
+## Study site
+
+::: incremental
+-   Malawi
+    -   Only 12% of waste managed by the municipality (UNDP 2021)
+    -   Over half the population living in poverty (World Bank 2022)
+    -   Recycling as both a waste management and economic opportunity
+-   Blantyre
+    -   Partnership with Chibuku (beverage company), Arkay (plastic manufacturer), and WASTE Advisers (local NGO)
+:::
+
+::: notes
+This research will be conducted in Malawi, where waste collection is already a major problem as only 12% of waste is managed formally by the municipality. In addition, over half the population is living in poverty and the currency, MWK, was recently devalued. Therefore, recycling plastic offers both a waste management as well economic opportunity. Specifically, the research will be conducted in Blantyre, where there is a unique partnership opportunity with a Malawin beverage producer, Chibuku, a plastic manufacturer, Arkay Plastics, as well as a local NGO, WASTE Advisers.
+:::
+
+## Overview - Work Packages {visibility="uncounted"}
+
+![](images/recycling-pilot.png){fig-align="center"}
+
+::: notes
+This is an overview of how the specific work packages interact. Since there are a lot of specific terms and actors, let's look at the proposed closed-loop system step by step.
+:::
+
+## Overview - Work Package 1 {visibility="uncounted"}
+
+![](images/recycling-pilot1.png){fig-align="center"}
+
+::: notes
+Firstly, I'll be looking at HDPE bottles from Chibuku's product, Super Maheu.
+:::
+
+## Overview - Work Package 1 {visibility="uncounted"}
+
+![](images/recycling-pilot2.png){fig-align="center"}
+
+::: notes
+The first work package will focus on optimising collection at Chibuku tavers, the company's retail locations. I will study all 4 taverns in Blantyre.
+:::
+
+## Overview - Work Package 1 {visibility="uncounted"}
+
+![](images/recycling-pilot3.png){fig-align="center"}
+
+::: notes
+The first work package will also include logistical considerations for the physical setup of collection and processing of the bottles (washing, labels, etc).
+:::
+
+## Overview - Work Package 1 {visibility="uncounted"}
+
+![](images/recycling-pilot4.png){fig-align="center"}
+
+::: notes
+Then the bottles will be transported to Arkay, the plastic manufacturer for recycling.
+:::
+
+## Overview - Work Package 2 {visibility="uncounted"}
+
+![](images/recycling-pilot5.png){fig-align="center"}
+
+::: notes
+The technical and safety considerations of recycling will be addressed in this second work package.
+:::
+
+## Overview - Work Package 2 {visibility="uncounted"}
+
+![](images/recycling-pilot6.png){fig-align="center"}
+
+::: notes
+And a target for recycled content will be derived for the production of new bottles.
+:::
+
+## Overview - Work Package 3 {visibility="uncounted"}
+
+![](images/recycling-pilot.png){fig-align="center"}
+
+::: notes
+The thirs and final work package will draw from the results of the previous two studies to design and evaluate a 1 year recycling pilot. The main focus is to understand financial profitabiliy.
+:::
+
+## Work package 1
+
+::: incremental
+-   Research question: What is the willingness to accept (WTA) payment to participate in drop-off recycling at Chibuku taverns?
+-   Methodology:
+    -   Physical evaluation
+    -   Focus group discussions
+    -   Contingent valuation survey
+:::
+
+::: notes
+Physical evaluation to determine collection setup, Focus group discussions with tavern mamas to inform survey and pilot, Contingent valuation survey to assess WTA payment for dropping off bottles. Contingent valuation (CV), also known as stated preference, is commonly used in environmental economics to place a value on goods or services that do not have a pre-determined price in the market (Carson and Hanemann 2005). R package DCchoice will be explored for data analysis of the survey results, analysed using five error distributions (logistic, log-logistic, normal, log-normal, and Weibull). also implement spike models, which are used to accommodate respondents that are not in-the-market (WTA value of 0).
+:::
+
+## Work package 2
+
+::: incremental
+-   Research question: What is the amount of recycled content that can be safely recycled into new bottles?
+-   Methodology:
+    -   Structured questionnaire and Catalogue of Malawi Standards
+    -   Laboratory tests
+:::
+
+::: notes
+To know the safety threshold for food contact plastics, I will conduct a questionnaire for operations experts at Chibuku and Arkay. Then I will verify these standards with the Catalog of MW standards. Once I know the safety targets, I will conduct both physical and chemical laboratory studies that simulate the effects of increasing recycled content and washing practices on the HDPE bottles. The EFSA evaluation of post-consumer plastics in direct food contact is based on an exposure evaluation of the consumer with post-consumer substances (The EFSA evaluation is mainly based on three main parameters: (i) concentrations contaminants in the post-consumer input materials, (ii) cleaning efficiency of the super-clean recycling process, and (iii) exposure to customers)
+
+minimum cleaning efficiencies are calculated by use of migration modelling. This can be done specifically for each surrogate, or more generally, as a function of molecular weight of any potential contaminant
+
+typical fresh milk storage conditions of up to 30 d at 5 °C, the migration criterion from PCR HDPE
+
+maximum allowable migration to 0.06 µg/L. From this migration value the maximum allowable concentrations was back-calculated and compared with the residual concentrations (c~res~) of each surrogate in the recycled HDPE
+
+Franz & Welle 2022 - the cleaning efficiencies of the investigated HDPE recycling processes are by far too low to meet the required EFSA criteria, especially for higher molecular weight compounds
+
+UK company has been recycling milk bottles (closed loop) since 2004 and has gotten approval by the US FDA but not EFSA (up to 50%, but only getting 15% now)
+
+Primary and secondary recycling involve mechanical reprocessing, e.g., bottle-to-bottle closed-loop recycling (primary) or recycling into lower value plastic (secondary). Tertiary recycling is understood as chemical recycling
+:::
+
+## Work package 3
+
+::: incremental
+-   Research question: What is the financial sustainability of a closed-loop recycling pilot for HDPE bottles?
+-   Methodology: Financial model assessing total costs along the value chain
+:::
+
+. . .
+
+![](images/recycling-pilot.png){fig-align="center"}
+
+::: notes
+This work package will build on an economic model that was published last year by another group at ETH that looked at the true costs of plastic across the value chain. costs, revenue, and processing volumes are used to generate earnings for each group, total costs along the value chain, and parameter sensitivity
+
+What is the most cost-effective bottle recycling pilot design? There are several common methods such as Net Benefits, Internal Rate of Return, and Benefit-to-Cost Ratio, but this study will use the most straightforward: life cycle cost analysis (LCCA) analysis (Davis et al. 2005; Fuller 2016). Using the data from the social and technical assessments, a LCCA will be used to compare different pilot scenarios and select the most sustainable option for implementation
+
+This research question can be broken down into two parts: i.What is the most cost-effective bottle recycling pilot design? ii.What is the economic sustainability of the implemented HDPE recycling pilot?
+:::
+
+## Timeline {background-image="images/timeline.png" background-size="contain"}
+
+::: notes
+slide notes
+:::
+
+## Future directions
+
+-   Inclusion of other FCM plastics for recycling (e.g. PET)
+
+-   Expansion to other geographies
+
+-   Incorporate more recycling partners
+
+::: notes
+Currently send PET to other cities or countries for recycling. What is the economic comparison of these two models? If the pilot is successful, expansion to other cities where Chibuku operates, but also other resource-limited contexts without large scale recycling facilities. Increased transparency in the plastic value chain?
+:::
+
+## Thanks!
+
+Special thanks to my aptitude committee: Prof. Liz Tilley, Dr. Chris Zurbrügg, and Prof. Kristina Shea, as well as the entire Global Health Engineering group
+
+![](images/group.JPG){fig-align="center"}
+
+## Waste characterization at the beach in Durban, South Africa {visibility="uncounted"}
+
+![](images/packaging.png){fig-align="center"}
+
+::: footer
+[McKinsey & Company, 2022](https://www.mckinsey.com/industries/chemicals/our-insights/beyond-the-bottle-solutions-for-recycling-challenging-plastics)
+:::
+
+## Waste characterization at the beach in Durban, South Africa {visibility="uncounted"}
+
+![](images/beach-pi.png){fig-align="center"}
+
+::: footer
+Chiara Meyer-Piening, 2022 Msc Semester Project
+:::
+
+## Waste characterization at the beach in Durban, South Africa {visibility="uncounted"}
+
+![](images/beach-numbers.png){fig-align="center"}
+
+::: footer
+Chiara Meyer-Piening, 2022 MSc Semester Project
+:::
+
+## Waste characterization at litter booms in Durban, South Africa {visibility="uncounted"}
+
+![](images/boom-pi.png){fig-align="center"}
+
+::: footer
+Chiara Meyer-Piening, 2022 MSc Semester Project
+:::
+
+## Waste characterization at litter booms in Durban, South Africa {visibility="uncounted"}
+
+![](images/boom-numbers.png){fig-align="center"}
+
+::: footer
+Chiara Meyer-Piening 2022 Semester Project
+:::
+
+## Plastic distribution by application at litter booms in Durban, South Africa {visibility="uncounted"}
+
+![](images/categorization.png){fig-align="center"}
+
+::: footer
+Raúl Bergen, 2022 MSc Thesis
+:::
+
+##Mismanaged plastic waste {visibility="uncounted"} ![](images/mismanaged.png)
+
+##Recycled plastic waste {visibility="uncounted"}
+
+![](images/recycled.png)
